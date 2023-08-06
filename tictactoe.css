@@ -1,0 +1,110 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: greenyellow;
+}
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+}
+.X_hover:hover::after {
+    content: 'X';
+    opacity: 0.4;
+}
+.O_hover:hover::after {
+    content: 'O';
+    opacity: 0.4;
+}
+.right-border {
+    border-right: 5px solid indigo;
+}
+.bottom-border {
+    border-bottom: 5px solid indigo;
+}
+nav {
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+p {
+    font-size: 20px;
+}
+section {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    position: relative;
+    cursor: pointer;
+}
+.strike {
+    position: absolute;
+    background-color: darkred;
+}
+.strike-row-1 {
+    width: 100%;
+    height: 4px;
+    top : 15%;
+}
+.strike-row-2 {
+    width: 100%;
+    height: 4px;
+    top : 48%;
+}
+.strike-row-3 {
+    width: 100%;
+    height: 4px;
+    top : 82%;
+}
+.strike-column-1 {
+    width: 4px;
+    height: 100%;
+    left : 15%;
+}
+.strike-column-2 {
+    width: 4px;
+    height: 100%;
+    left : 48%;
+}
+.strike-column-3 {
+    width: 4px;
+    height: 100%;
+    left : 83%;
+}
+.strike-diagonal-1 {
+    width: 90%;
+    height: 4px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(45deg); /*it will rotate*/
+}
+.strike-diagonal-2 {
+    width: 90%;
+    height: 4px;
+    top: 50%;
+    left: 5%;
+    transform: skewY(-45deg); /*it will rotate*/
+}
+.duplicate-result-area {
+    border: 5px solid indigo;
+    width: 200px;
+    padding: 50px;
+    text-align: center;
+    margin-top: 50px;
+}
+h2 {
+    margin-top:0px;
+    font-size: 35px;
+}
+.play-again {
+    background-color: transparent;
+    color: greenyellow;
+    border: 1px solid greenyellow;
+    padding: 10px;
+    font-size: 15px;
+    cursor: pointer;
+}
